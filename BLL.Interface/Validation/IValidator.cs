@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NET1.S._2019.Chemrukova._22
+namespace BLL.Interface.Validation
 {
-    public class Class1
+    public interface IValidator<in T>
     {
+        bool IsValid(T item);
     }
 }

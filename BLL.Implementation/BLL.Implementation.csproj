@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0AE97F5D-2D64-40AC-8A65-A65F4B042C39}</ProjectGuid>
+    <ProjectGuid>{6DBAB586-C90B-4550-872F-FADE73B1EC4E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NET1.S._2019.Chemrukova._22</RootNamespace>
-    <AssemblyName>NET1.S.2019.Chemrukova.22</AssemblyName>
+    <RootNamespace>BLL.Implementation</RootNamespace>
+    <AssemblyName>BLL.Implementation</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,8 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.3\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +49,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\URLAddress.cs" />
+    <Compile Include="Exception\URLAddressParseException.cs" />
+    <Compile Include="Logger\NLogLogger.cs" />
+    <Compile Include="Service\XmlDocumentService.cs" />
+    <Compile Include="Transformation\FromUrlLinesTransformer.cs" />
+    <Compile Include="Storage\UrlDataRetriever.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transformation\UrlAddressesToXmlTransformer.cs" />
+    <Compile Include="Transformation\UrlParser.cs" />
+    <Compile Include="Validation\UrlAddressValidator.cs" />
+    <Compile Include="Storage\XmlDataPersister.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">
+      <Project>{0a9e2620-21cb-4051-a3a0-8f01d0ccc6aa}</Project>
+      <Name>BLL.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
