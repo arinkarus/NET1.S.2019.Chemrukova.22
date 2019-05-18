@@ -48,5 +48,5 @@
 - [Выделеление абстракций](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/BLL.Interface)
 - [Реализация интерфейсов для конкретной задачи](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/BLL.Implementation)
 - [Тестирование](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/BLL.Tests)
-- [Разрешение зависимостей](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/DependencyResolver)
+- [Разрешение зависимостей (исп. Ninject)](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/DependencyResolver)
 - [Консольное приложение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/UI)
