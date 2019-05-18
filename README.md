@@ -39,11 +39,14 @@
 Для тех URL-адресов, которые не совпадают с указанным паттерном, залогировать информацию (предусмотреть возможность замены лог-фреймворка, в качестве дефолтного использовать NLog), отметив указанные строки, как необработанные. Для работы с URL можно использовать [Uri Class](https://msdn.microsoft.com/ru-ru/library/system.uri(v=vs.110).aspx).
   
 Продемонстрировать работу на примере консольного приложения. 
-
 При реализации solution-а для организации проектов использовать Stairway-паттерн.
-
 Для разрешения зависимостей использовать Ninject. 
-
 Для тетирования основой функциональности использовать NUnit и Moq фреймворки.
-
 При реализации системы типов учитывать возможность их использования в случае, когда в исходном текстовом файле информация об URL-адресах изменится на другую, иерархически представимую информацию.
+
+## Реализация (Done)
+- [Выделеление абстракций](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/BLL.Interface)
+- [Реализация интерфейсов для конкретной задачи](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/BLL.Implementation)
+- [Тестирование](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/BLL.Tests)
+- [Разрешение зависимостей](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/DependencyResolver)
+- [Консольное приложение](https://github.com/arinkarus/NET1.S.2019.Chemrukova.22/tree/master/UI)
